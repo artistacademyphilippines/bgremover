@@ -9,10 +9,10 @@ def process_text():
     data = request.data.decode('utf-8')
 
     if data:
-        #print(f"Received flask message: {data}")
-        return data  # Respond with a plain text message
+        return data
     else:
-        return "No message provided"
+        # Return an error as plain text
+        return 400
 
 if __name__ == '__main__':
     app.run()
