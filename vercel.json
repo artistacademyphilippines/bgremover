@@ -1,0 +1,14 @@
+{
+    "version": 2,
+    "builds": [
+      { "src": "bgremover/api/index.py", "use": "@vercel/python" }
+    ],
+  
+    "routes": [
+      { "src": "/(.*)", "dest": "bgremover/api/index.py" }
+    ],
+    
+    "rewrites": [
+    {"source": "/(.*)", "destination": "/"}
+    ]
+  }
