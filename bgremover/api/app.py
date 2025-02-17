@@ -6,15 +6,13 @@ CORS(app)  # This will enable CORS for all routes
 
 @app.route('/api', methods=['POST'])
 def process_text():
-    data = request.get_json()
+    data = request.data.decode('utf-8')
 
-    if 'message' in data:
-        message = data['message']
-        # Process the message (e.g., print, save, etc.)
-        #print(f"Received message: {message}")
-        return jsonify({"status": "success", "message": message}), 200
+    if data:
+        #print(f"Received flask message: {data}")
+        return data  # Respond with a plain text message
     else:
-        return jsonify({"status": "error", "message": "No message provided"}), 400
+        return "No message provided"
 
 if __name__ == '__main__':
     app.run()
