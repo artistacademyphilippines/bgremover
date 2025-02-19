@@ -4,9 +4,9 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
 
-@app.route('/api', methods=['GET'])
+@app.route('/api')
 def index():
-    return "Hello from Flask!"
+    print("Hello from Flask!")
 
-# Add this line at the end of the file
-api = app.wsgi_app
+if __name__  == '__main__':
+    app.run(debug=True)
