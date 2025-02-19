@@ -1,9 +1,9 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
-from rembg import remove
-import base64
-import io
-from PIL import Image
+#from rembg import remove
+#import base64
+#import io
+#from PIL import Image
 
 app = Flask(__name__)
 CORS(app)
@@ -12,7 +12,7 @@ CORS(app)
 @app.route('/api')
 def index():
     return "Hello from Flask!"
-
+'''
 @app.route('/remove-bg', methods=['POST'])
 def remove_background():
     try:
@@ -35,3 +35,4 @@ def remove_background():
         return jsonify({'image': f'data:image/png;base64,{img_str}'})
     except Exception as e:
         return jsonify({'error': str(e)}), 500
+'''
