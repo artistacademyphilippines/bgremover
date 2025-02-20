@@ -1,6 +1,6 @@
 # gunicorn_config.py
 
-bind = "0.0.0.0:8000"  # Bind to all available IPs on port 8000, adjust the port if needed
+bind = "0.0.0.0:80"  # Bind to all available IPs on port 8000, adjust the port if needed
 workers = 4  # Number of worker processes (adjust based on your CPU cores)
 worker_class = "sync"  # Sync worker type, ideal for Flask API
 threads = 2  # Number of threads per worker (adjust based on the load)
