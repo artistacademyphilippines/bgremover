@@ -28,9 +28,12 @@ def index():
         # Convert the output image to base64
         buffered = io.BytesIO()
         output.save(buffered, format="PNG")
-        img_str = base64.b64encode(buffered.getvalue()).decode()
+        buffered.seek(0)
 
-        return 'data:image/png;base64,' + img_str
+        # Encode the image in base64
+        img_base64 = base64.b64encode(buffered.read()).decode('utf-8')
+
+        return 'data:image/png;base64,' + img_base64
         
     #except Exception as e:
     #    return {'error': str(e)}, 500
