@@ -7,11 +7,6 @@ from PIL import Image
 
 app = Flask(__name__)
 CORS(app)
-
-@app.before_request
-def before_request():
-    signal.signal(signal.SIGALRM, timeout_handler)
-    signal.alarm(240)  # Timeout after 120 seconds
     
 @app.route('/')
 @app.route('/api')
