@@ -40,4 +40,4 @@ def index():
     #    return {'error': str(e)}, 500
         
 if __name__ == '__main__':
-    app.run()
+    app.run(timeout=2400)
