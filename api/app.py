@@ -6,7 +6,7 @@ import io
 from PIL import Image
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, origins=["https://artistacademyphilippines.github.io"])
     
 @app.route('/')
 @app.route('/api')
