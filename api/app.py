@@ -14,7 +14,7 @@ def index():
     return "Hello from Boss Ozy!"
 
 def remove_background():
-    try:
+    #try:
         # Get the base64 string from the request
         data = request.data.decode('utf-8')
         base64_string = data
@@ -35,8 +35,8 @@ def remove_background():
 
         return f'data:image/png;base64,{img_str}'
         '''
-    except Exception as e:
-        return {'error': str(e)}, 500
+    #except Exception as e:
+    #    return {'error': str(e)}, 500
         
 if __name__ == '__main__':
     app.run()
