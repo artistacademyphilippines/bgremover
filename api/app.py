@@ -28,12 +28,13 @@ def index():
         # Convert the output image to base64
         buffered = io.BytesIO()
         output.save(buffered, format="PNG")
-        buffered.seek(0)
+        #buffered.seek(0)
 
         # Encode the image in base64
-        img_base64 = base64.b64encode(buffered.read()).decode('utf-8')
+        #img_base64 = base64.b64encode(buffered.read()).decode('utf-8')
 
-        print('BOSS! data:image/png;base64,' + img_base64)
+        #print('BOSS! data:image/png;base64,' + img_base64)
+        print('Boss')
         
     #except Exception as e:
     #    return {'error': str(e)}, 500
