@@ -19,6 +19,8 @@ def remove_background():
         data = request.data.decode('utf-8')
         base64_string = data
 
+        return data
+        '''
         # Decode the base64 string to image
         img_data = base64.b64decode(base64_string.split(',')[1])
         img = Image.open(io.BytesIO(img_data))
@@ -32,6 +34,7 @@ def remove_background():
         img_str = base64.b64encode(buffered.getvalue()).decode()
 
         return f'data:image/png;base64,{img_str}'
+        '''
     except Exception as e:
         return {'error': str(e)}, 500
         
