@@ -7,7 +7,7 @@ CORS(app)
 @app.route('/')
 @app.route('/api')
 def index():
-    return "Hello from Flask!"
+    return "Hello from Boss Ozy!"
     
 if __name__ == '__main__':
     app.run()
