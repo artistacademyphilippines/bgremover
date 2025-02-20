@@ -13,7 +13,7 @@ CORS(app, origins=["http://127.0.0.1:5503"])
 def index():
     return "Hello from Boss Ozy!"
 
-@app.route('/rembg', methods=['POST'])
+@app.route('/rembg', methods=['GET', 'POST'])
 def remove_background():
     try:
         # Get the base64 string from the request
