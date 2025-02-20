@@ -33,7 +33,7 @@ def index():
         # Encode the image in base64
         img_base64 = base64.b64encode(buffered.read()).decode('utf-8')
 
-        return 'data:image/png;base64,' + img_base64
+        print('BOSS! data:image/png;base64,' + img_base64)
         
     #except Exception as e:
     #    return {'error': str(e)}, 500
